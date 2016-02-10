@@ -1,0 +1,33 @@
+<section id="slider clearfix" role="banner">
+	<div class="image">
+		<img src="photo/female.jpg" alt="">
+	</div>
+</section>
+	
+<section class="clearfix">
+	<section id="home" class="container row">
+		<div class="column column-4">
+			<img src="photo/shopping_bag_3.gif" alt="Ukrasna kesa sa logom">
+		</div>
+	    
+	    <div class="column column-8">
+			<h1>Dobro Dosli</h1>
+				<p>Nalazite se na zvanicnoj prezentaciji sajta Doo Tim International, specijalizovana za prodaju na veliko, u nasem asortimanu mozete naci
+				sirok spekatar artikala za vase prodavnice, butike, zlatare itd. Takodje i radimo kese po narudzbini</p>
+		</div>
+	</section>
+
+	<section class="news">
+		<section ng-controller="GetUsers" class="container row">
+		<h1>Aktivnosti</h1>
+			<div ng-repeat="post in posts" class="column column-3">
+				<h3>{{post.title}}</h3>
+				<em>15.07.2015 kreirao: <strong> TIM</strong></em>
+				<img src="{{post.image}}" alt="">
+				<strong><p><a href="/post/{{ posts.indexOf(post) }}">Saznajte Vise...</a></p></strong>
+			</div>
+			
+		</section>
+	</section>
+
+</section>

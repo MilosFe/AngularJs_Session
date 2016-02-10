@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html lang="en" ng-app="WebApp">
+<head >
+    <title>TIM International</title>
+    <meta name=description metaproperty=description content="">
+    <meta name=keywords metaproperty=keywords content="">
+	<meta charset="UTF-8">
+    <base href="/">
+    <meta name="fragment" content="!">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Radoman Milos">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular.routes.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+     $(document).on("click", "header .fa", function() {
+          $('nav').slideToggle('fast');});
+      $(document).on("click", "header nav ul li a", function() {
+         if ($(window).width() < 960) {
+            $('nav').slideToggle('fast');
+        }
+       });
+    </script>  
+ 
+</head>
+<body >
+ <!--[if lt IE 9]>
+ <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+	<div ng-include='"templates/header.html"'></div>
+    <div ng-view></div>
+    <div ng-include='"templates/footer.html"'></div>
+  </div>
+   
+</body>
+</html>
+
+
